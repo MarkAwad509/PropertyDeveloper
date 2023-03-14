@@ -171,8 +171,8 @@ class MaxDataManager{
         }
     }
     
-    //MARK: Delete depense
-    func deleteDepense(montant: Double, raison: String){
+    //MARK: Remove depense
+    func deleteDepense(raison: String, montant: Double){
         let context = persistentContainer.viewContext
         let depenses = Depenses()
         for depense in depenses {
@@ -189,7 +189,7 @@ class MaxDataManager{
         }
     }
     
-    //MARK: Delete paiement
+    //MARK: Remove paiement
     func deletePaiement(date: Date, mode: Mode, montant: Double){
         let context = persistentContainer.viewContext
         let paiements = Paiements()

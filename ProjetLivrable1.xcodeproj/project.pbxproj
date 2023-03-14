@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */; };
+		9704CA6929C0A1FB00BE24E4 /* ConventionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */; };
+		9704CA6B29C0B66B00BE24E4 /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */; };
+		9704CA6D29C0B78200BE24E4 /* PaiementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6C29C0B78200BE24E4 /* PaiementDAO.swift */; };
 		971AC8B029B8C6B00017DA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8AF29B8C6B00017DA91 /* AppDelegate.swift */; };
 		971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8B129B8C6B00017DA91 /* SceneDelegate.swift */; };
 		971AC8B429B8C6B00017DA91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8B329B8C6B00017DA91 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteBancaireDAO.swift; sourceTree = "<group>"; };
+		9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionDAO.swift; sourceTree = "<group>"; };
+		9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
+		9704CA6C29C0B78200BE24E4 /* PaiementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaiementDAO.swift; sourceTree = "<group>"; };
 		971AC8AC29B8C6B00017DA91 /* ProjetLivrable1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetLivrable1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		971AC8AF29B8C6B00017DA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		971AC8B129B8C6B00017DA91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +96,10 @@
 			children = (
 				971AC8CA29B8CE5E0017DA91 /* MaxDataManager.swift */,
 				971AC8CC29B8CF610017DA91 /* ProjetDAO.swift */,
+				9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */,
+				9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */,
+				9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */,
+				9704CA6C29C0B78200BE24E4 /* PaiementDAO.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -180,15 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9704CA6D29C0B78200BE24E4 /* PaiementDAO.swift in Sources */,
 				97C4F2E329BD969200FDC4C1 /* ProjetViewController.swift in Sources */,
+				9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */,
 				971AC8B429B8C6B00017DA91 /* ViewController.swift in Sources */,
 				971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */,
 				971AC8B029B8C6B00017DA91 /* AppDelegate.swift in Sources */,
 				97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */,
 				971AC8BA29B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld in Sources */,
+				9704CA6929C0A1FB00BE24E4 /* ConventionDAO.swift in Sources */,
 				971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */,
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,
 				971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */,
+				9704CA6B29C0B66B00BE24E4 /* DepenseDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,15 +8,14 @@
 import Foundation
 
 protocol IProjetDAO{
-    //func projets() -> [Projet]
+    func projets() -> [Projet]
 }
 
 class ProjetDAO: IProjetDAO{
     
+    static let shared = ProjetDAO()
     
-    //func projets() -> [Projet] {
-        
-    //}
-    
-    
+    func projets() -> [Projet] {
+        return MaxDataManager.shared.Projets()
+    }
 }
