@@ -18,9 +18,4 @@ extension CompteBancaire{
             self.somme -= montant
         }
     }
-    
-    func toString() -> String{
-        var to_return = "{\"compagnieBancaire\": \(self.compagnieBancaire), \"montant\": \(self.somme )}"
-        for (var depense in self.)
-    }
 }

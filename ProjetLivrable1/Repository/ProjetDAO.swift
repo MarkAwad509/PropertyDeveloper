@@ -8,15 +8,15 @@
 import Foundation
 
 protocol IProjetDAO{
-    func projets() -> [Projet]
+    //func projets() -> [Projet]
 }
 
 class ProjetDAO: IProjetDAO{
     
     
-    func projets() -> [Projet] {
-        <#code#>
-    }
+    //func projets() -> [Projet] {
+        
+    //}
     
     
 }

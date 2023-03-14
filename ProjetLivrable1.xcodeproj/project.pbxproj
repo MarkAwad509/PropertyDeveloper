@@ -14,9 +14,11 @@
 		971AC8BA29B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8B829B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld */; };
 		971AC8BC29B8C6B10017DA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971AC8BB29B8C6B10017DA91 /* Assets.xcassets */; };
 		971AC8BF29B8C6B10017DA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971AC8BD29B8C6B10017DA91 /* LaunchScreen.storyboard */; };
-		971AC8CB29B8CE5E0017DA91 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8CA29B8CE5E0017DA91 /* DataManager.swift */; };
+		971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8CA29B8CE5E0017DA91 /* MaxDataManager.swift */; };
 		971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8CC29B8CF610017DA91 /* ProjetDAO.swift */; };
 		971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8D129B8D0E40017DA91 /* CompteBancaire.swift */; };
+		97C4F2E329BD969200FDC4C1 /* ProjetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E229BD969200FDC4C1 /* ProjetViewController.swift */; };
+		97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E429BE622C00FDC4C1 /* Paiement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +31,11 @@
 		971AC8BB29B8C6B10017DA91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		971AC8BE29B8C6B10017DA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		971AC8C029B8C6B10017DA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		971AC8CA29B8CE5E0017DA91 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		971AC8CA29B8CE5E0017DA91 /* MaxDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxDataManager.swift; sourceTree = "<group>"; };
 		971AC8CC29B8CF610017DA91 /* ProjetDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetDAO.swift; sourceTree = "<group>"; };
 		971AC8D129B8D0E40017DA91 /* CompteBancaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteBancaire.swift; sourceTree = "<group>"; };
+		97C4F2E229BD969200FDC4C1 /* ProjetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetViewController.swift; sourceTree = "<group>"; };
+		97C4F2E429BE622C00FDC4C1 /* Paiement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paiement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		971AC8AE29B8C6B00017DA91 /* ProjetLivrable1 */ = {
 			isa = PBXGroup;
 			children = (
+				97C4F2DE29BD961400FDC4C1 /* Controllers */,
 				971AC8CE29B8D0C80017DA91 /* Entitites */,
 				971AC8C929B8CE420017DA91 /* Repository */,
 				971AC8AF29B8C6B00017DA91 /* AppDelegate.swift */,
@@ -81,7 +86,7 @@
 		971AC8C929B8CE420017DA91 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				971AC8CA29B8CE5E0017DA91 /* DataManager.swift */,
+				971AC8CA29B8CE5E0017DA91 /* MaxDataManager.swift */,
 				971AC8CC29B8CF610017DA91 /* ProjetDAO.swift */,
 			);
 			path = Repository;
@@ -91,8 +96,17 @@
 			isa = PBXGroup;
 			children = (
 				971AC8D129B8D0E40017DA91 /* CompteBancaire.swift */,
+				97C4F2E429BE622C00FDC4C1 /* Paiement.swift */,
 			);
 			path = Entitites;
+			sourceTree = "<group>";
+		};
+		97C4F2DE29BD961400FDC4C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97C4F2E229BD969200FDC4C1 /* ProjetViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C4F2E329BD969200FDC4C1 /* ProjetViewController.swift in Sources */,
 				971AC8B429B8C6B00017DA91 /* ViewController.swift in Sources */,
-				971AC8CB29B8CE5E0017DA91 /* DataManager.swift in Sources */,
+				971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */,
 				971AC8B029B8C6B00017DA91 /* AppDelegate.swift in Sources */,
+				97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */,
 				971AC8BA29B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld in Sources */,
 				971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */,
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,

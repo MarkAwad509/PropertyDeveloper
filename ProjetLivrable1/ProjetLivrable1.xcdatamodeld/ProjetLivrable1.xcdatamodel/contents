@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CompteBancaire" representedClassName="CompteBancaire" syncable="YES" codeGenerationType="class">
-        <attribute name="compagnieBancaire" optional="YES" attributeType="String"/>
+        <attribute name="nom" optional="YES" attributeType="String"/>
         <attribute name="somme" optional="YES" attributeType="Double" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="depenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="compte" inverseEntity="Depense"/>
+        <relationship name="paiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Paiement" inverseName="compte" inverseEntity="Paiement"/>
     </entity>
     <entity name="Convention" representedClassName="Convention" syncable="YES" codeGenerationType="class">
-        <attribute name="fournisseur" optional="YES" attributeType="String" minValueString="5"/>
-        <attribute name="type" optional="YES" attributeType="Float" minValueString="5" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="domaine" optional="YES" attributeType="String" minValueString="5"/>
+        <relationship name="paiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Paiement" inverseName="convention" inverseEntity="Paiement"/>
     </entity>
     <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
-        <attribute name="montant" optional="YES"/>
-        <relationship name="compte" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompteBancaire"/>
-        <relationship name="projet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projet" inverseName="depense" inverseEntity="Projet"/>
+        <attribute name="montant" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="raison" optional="YES" attributeType="String"/>
+        <relationship name="compte" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompteBancaire" inverseName="depenses" inverseEntity="CompteBancaire"/>
+        <relationship name="projet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projet" inverseName="depenses" inverseEntity="Projet"/>
     </entity>
     <entity name="Paiement" representedClassName="Paiement" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" minDateTimeInterval="699976380" usesScalarValueType="NO"/>
         <attribute name="mode" optional="YES" attributeType="String" minValueString="6" maxValueString="6"/>
-        <attribute name="montant" optional="YES" attributeType="Double" minValueString="0.01" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="compte" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompteBancaire"/>
-        <relationship name="convention" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Convention"/>
+        <attribute name="montant" optional="YES" attributeType="Double" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="compte" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompteBancaire" inverseName="paiements" inverseEntity="CompteBancaire"/>
+        <relationship name="convention" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Convention" inverseName="paiements" inverseEntity="Convention"/>
     </entity>
     <entity name="Projet" representedClassName="Projet" syncable="YES" codeGenerationType="class">
         <attribute name="nom" optional="YES" attributeType="String" minValueString="4" maxValueString="35"/>
-        <relationship name="depense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Depense" inverseName="projet" inverseEntity="Depense"/>
+        <relationship name="depenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="projet" inverseEntity="Depense"/>
     </entity>
 </model>
