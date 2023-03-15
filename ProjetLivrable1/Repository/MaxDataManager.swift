@@ -14,7 +14,7 @@ class MaxDataManager{
     //MARK: Persistent controller initialization
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "Demo05")
+        let container = NSPersistentContainer(name: "ProjetLivrable1")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 
@@ -23,6 +23,54 @@ class MaxDataManager{
         })
         return container
     }()
+    
+    func removeAllDatas(){
+        let context = persistentContainer.viewContext
+        
+        let projets = Projets()
+        for projet in projets {
+            context.delete(projet)
+        }
+        
+        let comptes = Comptes()
+        for compte in comptes {
+            context.delete(compte)
+        }
+        
+        let conventions = Conventions()
+        for convention in conventions {
+            context.delete(convention)
+        }
+
+        do {
+            try context.save()
+        } catch {
+            let error = error as NSError
+            print("Addition did not work: \(error)", error.userInfo)
+        }
+    }
+    
+    //MARK: Init function
+    func initDatas(){
+        let context = persistentContainer.viewContext
+        let convention1 = Convention(context: context)
+        convention1.domaine = "Maçonnerie"
+        let convention2 = Convention(context: context)
+        convention2.domaine = "Plomberie"
+        let convention3 = Convention(context: context)
+        convention3.domaine = "Électricité"
+        let convention4 = Convention(context: context)
+        convention4.domaine = "Matériaux de construction"
+        let convention5 = Convention(context: context)
+        convention5.domaine = "Architecte"
+        
+        do{
+            try context.save()
+        } catch {
+            let error = error as NSError
+            print("Addition did not work: \(error)", error.userInfo)
+        }
+    }
     
     //MARK: Trouver les projets
     func Projets() -> [Projet] {
@@ -63,9 +111,11 @@ class MaxDataManager{
         }
     }
     
-    //MARK: Trouver les dépenses
-    func Depenses() -> [Depense]{
+    //MARK: Trouver les dépenses par projets
+    func Depenses(projet: Projet) -> [Depense]{
         let fetchRequest: NSFetchRequest<Depense> = Depense.fetchRequest()
+        let predicate = NSPredicate(format: "projet = %@", projet)
+        fetchRequest.predicate = predicate
         
         let context = persistentContainer.viewContext
         do {
@@ -76,9 +126,11 @@ class MaxDataManager{
         }
     }
     
-    //MARK: Trouver les paiements
-    func Paiements() -> [Paiement]{
+    //MARK: Trouver les paiements par compte bancaire
+    func Paiements(compte: CompteBancaire) -> [Paiement]{
         let fetchRequest: NSFetchRequest<Paiement> = Paiement.fetchRequest()
+        let predicate = NSPredicate(format: "compte = %@", compte)
+        fetchRequest.predicate = predicate
         
         let context = persistentContainer.viewContext
         do {
@@ -146,10 +198,9 @@ class MaxDataManager{
         }
     }
     
-    //MARK: Ajouter paiement à une convention
-    func initPaiement(paiement: Paiement, compteBancaire: CompteBancaire, nomConvention: String){
+    //MARK: Ajouter paiement à un compte bancaire
+    func addPaiementToCompte(paiement: Paiement, compteBancaire: CompteBancaire, nomConvention: String){
         let context = persistentContainer.viewContext
-        let depense = Depense(context: context)
         let conventions = Conventions()
         
         for convention in conventions{
@@ -172,9 +223,9 @@ class MaxDataManager{
     }
     
     //MARK: Remove depense
-    func deleteDepense(raison: String, montant: Double){
+    func deleteDepense(raison: String, montant: Double, projet: Projet){
         let context = persistentContainer.viewContext
-        let depenses = Depenses()
+        let depenses = Depenses(projet: projet)
         for depense in depenses {
             if depense.montant == montant && depense.raison == raison{
                 context.delete(depense)
@@ -190,9 +241,9 @@ class MaxDataManager{
     }
     
     //MARK: Remove paiement
-    func deletePaiement(date: Date, mode: Mode, montant: Double){
+    func deletePaiement(date: Date, mode: Mode, montant: Double, compte: CompteBancaire){
         let context = persistentContainer.viewContext
-        let paiements = Paiements()
+        let paiements = Paiements(compte: compte)
         for paiement in paiements {
             if paiement.date == date && paiement.modeDePaiement == mode && paiement.montant == montant{
                 context.delete(paiement)

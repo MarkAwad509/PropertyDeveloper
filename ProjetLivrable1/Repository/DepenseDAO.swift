@@ -8,23 +8,28 @@
 import Foundation
 
 protocol IDepenseDAO{
-    func Depenses() -> [Depense]
+    func Depenses(projet: Projet) -> [Depense]
     func addDepense(raison: String, montant: Double) ->  Depense
-    func removeDepense(raison: String, montant: Double)
+    func addDepenseToProjet(depense: Depense, projet: Projet, nomCompteBancaire: String)
+    func removeDepense(raison: String, montant: Double, projet: Projet)
 }
 
 class DepenseDAO: IDepenseDAO{
     static let shared = DepenseDAO()
     
-    func Depenses() -> [Depense] {
-        return MaxDataManager.shared.Depenses()
+    func Depenses(projet: Projet) -> [Depense] {
+        return MaxDataManager.shared.Depenses(projet: projet)
     }
     
     func addDepense(raison: String, montant: Double) -> Depense {
         return MaxDataManager.shared.initDepense(raison: raison, montant: montant)
     }
     
-    func removeDepense(raison: String, montant: Double) {
-        MaxDataManager.shared.deleteDepense(raison: raison, montant: montant)
+    func addDepenseToProjet(depense: Depense, projet: Projet, nomCompteBancaire: String) {
+        MaxDataManager.shared.addDepenseToProjet(depense: depense, nomCompteBancaire: nomCompteBancaire, projet: projet)
+    }
+    
+    func removeDepense(raison: String, montant: Double, projet: Projet) {
+        MaxDataManager.shared.deleteDepense(raison: raison, montant: montant, projet: projet)
     }
 }

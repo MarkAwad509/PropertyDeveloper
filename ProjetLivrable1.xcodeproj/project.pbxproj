@@ -13,7 +13,6 @@
 		9704CA6D29C0B78200BE24E4 /* PaiementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6C29C0B78200BE24E4 /* PaiementDAO.swift */; };
 		971AC8B029B8C6B00017DA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8AF29B8C6B00017DA91 /* AppDelegate.swift */; };
 		971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8B129B8C6B00017DA91 /* SceneDelegate.swift */; };
-		971AC8B429B8C6B00017DA91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8B329B8C6B00017DA91 /* ViewController.swift */; };
 		971AC8B729B8C6B00017DA91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971AC8B529B8C6B00017DA91 /* Main.storyboard */; };
 		971AC8BA29B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8B829B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld */; };
 		971AC8BC29B8C6B10017DA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971AC8BB29B8C6B10017DA91 /* Assets.xcassets */; };
@@ -21,7 +20,11 @@
 		971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8CA29B8CE5E0017DA91 /* MaxDataManager.swift */; };
 		971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8CC29B8CF610017DA91 /* ProjetDAO.swift */; };
 		971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971AC8D129B8D0E40017DA91 /* CompteBancaire.swift */; };
-		97C4F2E329BD969200FDC4C1 /* ProjetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E229BD969200FDC4C1 /* ProjetViewController.swift */; };
+		979E42A729C129440025AC90 /* ProjetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E42A629C129440025AC90 /* ProjetTableViewController.swift */; };
+		979E42A929C1334A0025AC90 /* DepenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E42A829C1334A0025AC90 /* DepenseTableViewController.swift */; };
+		979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E42AA29C146530025AC90 /* CompteTableViewController.swift */; };
+		97A2BC6629C1537B00D90A03 /* ConventionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */; };
+		97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */; };
 		97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E429BE622C00FDC4C1 /* Paiement.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +36,6 @@
 		971AC8AC29B8C6B00017DA91 /* ProjetLivrable1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetLivrable1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		971AC8AF29B8C6B00017DA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		971AC8B129B8C6B00017DA91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		971AC8B329B8C6B00017DA91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		971AC8B629B8C6B00017DA91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		971AC8B929B8C6B00017DA91 /* ProjetLivrable1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjetLivrable1.xcdatamodel; sourceTree = "<group>"; };
 		971AC8BB29B8C6B10017DA91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +44,11 @@
 		971AC8CA29B8CE5E0017DA91 /* MaxDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxDataManager.swift; sourceTree = "<group>"; };
 		971AC8CC29B8CF610017DA91 /* ProjetDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetDAO.swift; sourceTree = "<group>"; };
 		971AC8D129B8D0E40017DA91 /* CompteBancaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteBancaire.swift; sourceTree = "<group>"; };
-		97C4F2E229BD969200FDC4C1 /* ProjetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetViewController.swift; sourceTree = "<group>"; };
+		979E42A629C129440025AC90 /* ProjetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetTableViewController.swift; sourceTree = "<group>"; };
+		979E42A829C1334A0025AC90 /* DepenseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseTableViewController.swift; sourceTree = "<group>"; };
+		979E42AA29C146530025AC90 /* CompteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteTableViewController.swift; sourceTree = "<group>"; };
+		97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionTableViewController.swift; sourceTree = "<group>"; };
+		97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaiementTableViewController.swift; sourceTree = "<group>"; };
 		97C4F2E429BE622C00FDC4C1 /* Paiement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paiement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +87,6 @@
 				971AC8C929B8CE420017DA91 /* Repository */,
 				971AC8AF29B8C6B00017DA91 /* AppDelegate.swift */,
 				971AC8B129B8C6B00017DA91 /* SceneDelegate.swift */,
-				971AC8B329B8C6B00017DA91 /* ViewController.swift */,
 				971AC8B529B8C6B00017DA91 /* Main.storyboard */,
 				971AC8BB29B8C6B10017DA91 /* Assets.xcassets */,
 				971AC8BD29B8C6B10017DA91 /* LaunchScreen.storyboard */,
@@ -116,7 +121,11 @@
 		97C4F2DE29BD961400FDC4C1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				97C4F2E229BD969200FDC4C1 /* ProjetViewController.swift */,
+				979E42A629C129440025AC90 /* ProjetTableViewController.swift */,
+				979E42A829C1334A0025AC90 /* DepenseTableViewController.swift */,
+				979E42AA29C146530025AC90 /* CompteTableViewController.swift */,
+				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
+				97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,16 +202,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9704CA6D29C0B78200BE24E4 /* PaiementDAO.swift in Sources */,
-				97C4F2E329BD969200FDC4C1 /* ProjetViewController.swift in Sources */,
 				9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */,
-				971AC8B429B8C6B00017DA91 /* ViewController.swift in Sources */,
+				97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */,
 				971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */,
+				97A2BC6629C1537B00D90A03 /* ConventionTableViewController.swift in Sources */,
 				971AC8B029B8C6B00017DA91 /* AppDelegate.swift in Sources */,
 				97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */,
 				971AC8BA29B8C6B00017DA91 /* ProjetLivrable1.xcdatamodeld in Sources */,
 				9704CA6929C0A1FB00BE24E4 /* ConventionDAO.swift in Sources */,
+				979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */,
 				971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */,
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,
+				979E42A929C1334A0025AC90 /* DepenseTableViewController.swift in Sources */,
+				979E42A729C129440025AC90 /* ProjetTableViewController.swift in Sources */,
 				971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */,
 				9704CA6B29C0B66B00BE24E4 /* DepenseDAO.swift in Sources */,
 			);
