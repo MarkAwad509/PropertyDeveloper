@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79ADAD3729C1F91C00A134A4 /* ProjetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */; };
 		9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */; };
 		9704CA6929C0A1FB00BE24E4 /* ConventionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */; };
 		9704CA6B29C0B66B00BE24E4 /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetDetailViewController.swift; sourceTree = "<group>"; };
 		9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteBancaireDAO.swift; sourceTree = "<group>"; };
 		9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionDAO.swift; sourceTree = "<group>"; };
 		9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				979E42AA29C146530025AC90 /* CompteTableViewController.swift */,
 				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
 				97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */,
+				79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */,
 				971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */,
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,
+				79ADAD3729C1F91C00A134A4 /* ProjetDetailViewController.swift in Sources */,
 				979E42A929C1334A0025AC90 /* DepenseTableViewController.swift in Sources */,
 				979E42A729C129440025AC90 /* ProjetTableViewController.swift in Sources */,
 				971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */,
