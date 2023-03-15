@@ -53,6 +53,19 @@ class MaxDataManager{
     //MARK: Init function
     func initDatas(){
         let context = persistentContainer.viewContext
+        
+        let projet1 = Projet(context: context)
+        projet1.nom = "Les Jardins Mercier"
+        let projet2 = Projet(context: context)
+        projet2.nom = "YUL Condominiums"
+        
+        let compte1 = CompteBancaire(context: context)
+        compte1.nom = "BC1_RBC"
+        compte1.somme = 15000
+        let compte2 = CompteBancaire(context: context)
+        compte2.nom = "BC2_BN"
+        compte2.somme = 25000
+        
         let convention1 = Convention(context: context)
         convention1.domaine = "Maçonnerie"
         let convention2 = Convention(context: context)

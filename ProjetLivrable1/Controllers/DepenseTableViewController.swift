@@ -8,10 +8,12 @@
 import UIKit
 
 class DepenseTableViewController: UITableViewController {
-    var depenses: [CompteBancaire] = []
+    var depenses: [Depense] = []
+    var projet: Projet
     override func viewDidLoad() {
-        self.depenses = CompteBancaireDAO.shared.ComptesBancaire()
-        //super.viewDidLoad()
+        if let proj = projet{
+            self.depenses = DepenseDAO.shared.Depenses(projet: <#T##Projet#>)
+        }
     }
 
     // MARK: - Table view data source
