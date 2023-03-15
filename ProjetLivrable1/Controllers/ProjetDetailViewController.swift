@@ -8,11 +8,15 @@
 import UIKit
 
 class ProjetDetailViewController: UIViewController {
-
+    var projet: Projet!
+    @IBOutlet weak var titre: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        titre.text = projet.nom
+        desc.text = projet.desc
     }
     
 

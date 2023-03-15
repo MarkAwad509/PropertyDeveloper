@@ -9,10 +9,10 @@ import UIKit
 
 class DepenseTableViewController: UITableViewController {
     var depenses: [Depense] = []
-    var projet: Projet
+    var projet: Projet!
     override func viewDidLoad() {
         if let proj = projet{
-            self.depenses = DepenseDAO.shared.Depenses(projet: <#T##Projet#>)
+            self.depenses = DepenseDAO.shared.Depenses(projet: projet)
         }
     }
 
@@ -33,7 +33,7 @@ class DepenseTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "compteCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = self.depenses[indexPath.row].nom
+        cell.textLabel?.text = self.depenses[indexPath.row].raison
         
         return cell
     }

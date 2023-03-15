@@ -24,6 +24,7 @@
         <relationship name="convention" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Convention" inverseName="paiements" inverseEntity="Convention"/>
     </entity>
     <entity name="Projet" representedClassName="Projet" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="nom" optional="YES" attributeType="String"/>
         <relationship name="depenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="projet" inverseEntity="Depense"/>
     </entity>

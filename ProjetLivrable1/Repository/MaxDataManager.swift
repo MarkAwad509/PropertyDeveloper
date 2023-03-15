@@ -56,8 +56,11 @@ class MaxDataManager{
         
         let projet1 = Projet(context: context)
         projet1.nom = "Les Jardins Mercier"
+        projet1.desc = "Maison sur le pont."
+        
         let projet2 = Projet(context: context)
         projet2.nom = "YUL Condominiums"
+        projet2.desc = "Vivre à côté de l'aéroport? Un rêve."
         
         let compte1 = CompteBancaire(context: context)
         compte1.nom = "BC1_RBC"

@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="uQn-8J-chT" kind="show" id="qwb-7b-dqH"/>
+                                    <segue destination="uQn-8J-chT" kind="show" identifier="projectDetailSegue" id="qwb-7b-dqH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,20 +51,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depenseCell" id="acW-eh-kTj">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="acW-eh-kTj" id="R06-CR-cKX">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant($)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHI-rM-XEf">
-                                            <rect key="frame" x="287" y="10" width="86" height="23"/>
+                                            <rect key="frame" x="287" y="9.9999999999999982" width="86" height="23.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MM-DU-WEQ">
-                                            <rect key="frame" x="20" y="11" width="51" height="21"/>
+                                            <rect key="frame" x="20" y="10.999999999999998" width="51" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -298,23 +298,23 @@
             </objects>
             <point key="canvasLocation" x="1856" y="883"/>
         </scene>
-        <!--View Controller-->
+        <!--Projet Detail View Controller-->
         <scene sceneID="Fkm-g4-5Ua">
             <objects>
-                <viewController id="uQn-8J-chT" sceneMemberID="viewController">
+                <viewController id="uQn-8J-chT" customClass="ProjetDetailViewController" customModule="ProjetLivrable1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C8X-bD-7nE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VA5-QY-ZQ0">
-                                <rect key="frame" x="36" y="146" width="309" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VA5-QY-ZQ0">
+                                <rect key="frame" x="16" y="103" width="309" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-nk-nS0">
-                                <rect key="frame" x="43" y="215" width="302" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="desc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-nk-nS0">
+                                <rect key="frame" x="19" y="130" width="302" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -325,6 +325,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jZ3-tq-7j2"/>
+                    <connections>
+                        <outlet property="desc" destination="mfN-nk-nS0" id="vKF-8L-esl"/>
+                        <outlet property="titre" destination="VA5-QY-ZQ0" id="OR3-ZE-QZm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bel-dE-gaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

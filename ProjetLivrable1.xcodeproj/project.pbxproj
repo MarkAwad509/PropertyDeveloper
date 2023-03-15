@@ -124,11 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				979E42A629C129440025AC90 /* ProjetTableViewController.swift */,
+				79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */,
 				979E42A829C1334A0025AC90 /* DepenseTableViewController.swift */,
 				979E42AA29C146530025AC90 /* CompteTableViewController.swift */,
 				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
 				97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */,
-				79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9U5Z2TW5WC;
+				DEVELOPMENT_TEAM = 34XBKYZ9ZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ProjetLivrable1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -380,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Colval.6M5-VL.ProjetLivrable1";
+				PRODUCT_BUNDLE_IDENTIFIER = iOS.course.ProjetLivrable1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9U5Z2TW5WC;
+				DEVELOPMENT_TEAM = 34XBKYZ9ZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ProjetLivrable1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -408,7 +408,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Colval.6M5-VL.ProjetLivrable1";
+				PRODUCT_BUNDLE_IDENTIFIER = iOS.course.ProjetLivrable1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
