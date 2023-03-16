@@ -25,6 +25,7 @@
 		979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E42AA29C146530025AC90 /* CompteTableViewController.swift */; };
 		97A2BC6629C1537B00D90A03 /* ConventionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */; };
 		97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */; };
+		97A2BC6A29C2618900D90A03 /* AddDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */; };
 		97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E429BE622C00FDC4C1 /* Paiement.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		979E42AA29C146530025AC90 /* CompteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteTableViewController.swift; sourceTree = "<group>"; };
 		97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionTableViewController.swift; sourceTree = "<group>"; };
 		97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaiementTableViewController.swift; sourceTree = "<group>"; };
+		97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepenseViewController.swift; sourceTree = "<group>"; };
 		97C4F2E429BE622C00FDC4C1 /* Paiement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paiement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				979E42AA29C146530025AC90 /* CompteTableViewController.swift */,
 				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
 				97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */,
+				97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9704CA6D29C0B78200BE24E4 /* PaiementDAO.swift in Sources */,
+				97A2BC6A29C2618900D90A03 /* AddDepenseViewController.swift in Sources */,
 				9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */,
 				97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */,
 				971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */,

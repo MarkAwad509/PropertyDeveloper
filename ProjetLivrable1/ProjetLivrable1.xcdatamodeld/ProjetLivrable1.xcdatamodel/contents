@@ -8,6 +8,7 @@
     </entity>
     <entity name="Convention" representedClassName="Convention" syncable="YES" codeGenerationType="class">
         <attribute name="domaine" optional="YES" attributeType="String" minValueString="5"/>
+        <attribute name="fournisseur" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="paiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Paiement" inverseName="convention" inverseEntity="Paiement"/>
     </entity>
     <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
@@ -24,6 +25,7 @@
         <relationship name="convention" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Convention" inverseName="paiements" inverseEntity="Convention"/>
     </entity>
     <entity name="Projet" representedClassName="Projet" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="nom" optional="YES" attributeType="String"/>
         <relationship name="depenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="projet" inverseEntity="Depense"/>
     </entity>

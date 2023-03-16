@@ -82,8 +82,8 @@ class ProjetTableViewController: UITableViewController {
         let index = tableView.indexPath(for: cell)!.row
         
         //envoyer l'adresse à PeopleViewTableController
-        //let destination = segue.destination as? DepenseTableViewController
-        //destination?.address = self.addresses[index]
+        let destination = segue.destination as? DepenseTableViewController
+        destination?.projet = self.projets[index]
     }
     
 

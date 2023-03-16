@@ -37,7 +37,7 @@ class CompteTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = self.comptes[indexPath.row].nom
-        cell.detailTextLabel?.text = "\(String( self.comptes[indexPath.row].somme))$"
+        cell.detailTextLabel?.text = "\(String(format: "%.2f",  self.comptes[indexPath.row].somme))$"
         
         return cell
     }
@@ -77,13 +77,18 @@ class CompteTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Recuperer l'index de la cellule sur lequel le user tapotte
+        let cell = sender as! UITableViewCell
+        let index = tableView.indexPath(for: cell)!.row
+        
+        //envoyer l'adresse à PeopleViewTableController
+        let destination = segue.destination as? PaiementTableViewController
+        destination?.compte = self.comptes[index]
     }
-    */
+    
 }

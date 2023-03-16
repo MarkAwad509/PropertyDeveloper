@@ -154,6 +154,22 @@ class MaxDataManager{
         }
     }
     
+    //MARK: Ajouter convention
+    func intiConvention(domaine: String, fournisseur: String) -> Convention{
+        let context = persistentContainer.viewContext
+        let convention = Convention(context: context)
+        convention.domaine = domaine
+        convention.fournisseur = fournisseur
+        
+        do{
+            try context.save()
+        } catch {
+            let error = error as NSError
+            print("Addition did not work: \(error)", error.userInfo)
+        }
+        return convention
+    }
+    
     //MARK: Ajouter dépense
     func initDepense(raison: String, montant: Double) -> Depense{
         let context = persistentContainer.viewContext

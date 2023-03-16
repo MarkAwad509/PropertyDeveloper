@@ -8,10 +8,14 @@
 import UIKit
 
 class PaiementTableViewController: UITableViewController {
+    @IBOutlet weak var lbl_solde: UILabel!
     var paiements: [Paiement] = []
-    var compte: CompteBancaire!
+    var compte: CompteBancaire?
     override func viewDidLoad() {
-        self.paiements = PaiementDAO.shared.Paiements(compte: self.compte)
+        if let compteBank = compte{
+            self.paiements = PaiementDAO.shared.Paiements(compte: self.compte!)
+            self.lbl_solde.text! += "\(String(format: "%.2f", self.compte!.somme))$"
+        }
         //super.viewDidLoad()
     }
 
