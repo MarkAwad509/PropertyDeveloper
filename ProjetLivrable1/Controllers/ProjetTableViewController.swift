@@ -11,8 +11,8 @@ class ProjetTableViewController: UITableViewController {
     var projets: [Projet] = []
     override func viewDidLoad() {
         //super.viewDidLoad()
-        //MaxDataManager.shared.initDatas()
-        //MaxDataManager.shared.removeAllDatas()
+        MaxDataManager.shared.removeAllDatas()
+        MaxDataManager.shared.initDatas()
         self.projets = ProjetDAO.shared.projets()
     }
 

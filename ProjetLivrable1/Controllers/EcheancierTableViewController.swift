@@ -1,22 +1,18 @@
 //
-//  PaiementTableViewController.swift
+//  EcheancierTableViewController.swift
 //  ProjetLivrable1
 //
-//  Created by Maxim Proulx on 2023-03-15.
+//  Created by Mark Awad on 2023-03-15.
 //
 
 import UIKit
 
-class PaiementTableViewController: UITableViewController {
-    @IBOutlet weak var lbl_solde: UILabel!
+class EcheancierTableViewController: UITableViewController {
     var paiements: [Paiement] = []
-    var compte: CompteBancaire?
+    
     override func viewDidLoad() {
-        if let compteBank = compte{
-            self.paiements = PaiementDAO.shared.PaiementsByBank(compte: self.compte!)
-            self.lbl_solde.text! += "\(String(format: "%.2f", self.compte!.somme))$"
-        }
-        //super.viewDidLoad()
+        self.paiements = PaiementDAO.shared.Paiements()
+        super.viewDidLoad()
     }
 
     // MARK: - Table view data source
@@ -28,21 +24,23 @@ class PaiementTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.paiements.count
+        return paiements.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "paiementCell", for: indexPath)
-
-        // Configure the cell...
-        cell.textLabel?.text = self.paiements[indexPath.row].convention?.domaine
-        //cell.detailTextLabel?.text = ""
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EcheancierCell", for: indexPath) as? EcheancierCell
         
-        return cell
+        let paiement = self.paiements[indexPath.row]
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YYYY"
+        
+        cell?.lbl_montant?.text = String(paiement.montant) + "$"
+        cell?.lbl_date?.text = formatter.string(for: paiement.date) ?? "dd/MM/YYYY"
+        cell?.lbl_paymentMode?.text = paiement.mode
+        cell?.lbl_nomConvention?.text = paiement.convention?.domaine
+        return cell!
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -78,13 +76,14 @@ class PaiementTableViewController: UITableViewController {
     }
     */
 
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let destination = segue.destination as? AddPaiementViewController
-        destination?.compte = self.compte
     }
+    */
+
 }
