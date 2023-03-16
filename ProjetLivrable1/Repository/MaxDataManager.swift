@@ -86,21 +86,23 @@ class MaxDataManager{
         formatter.dateFormat = "dd/MM/YYYY"
         
         let paiement1 = Paiement(context: context)
-        paiement1.date = formatter.date(from:"25/12/2022")
+        paiement1.datePaiement = formatter.date(from:"25/03/2023")
         paiement1.mode = "cash"
         paiement1.montant = 20000.00
         paiement1.compte = compte2
         paiement1.convention = convention5
         
         let paiement2 = Paiement(context: context)
-        paiement2.date = formatter.date(from:"25/12/2022")
+        paiement2.dateDebut = formatter.date(from:"01/03/2023")
+        paiement2.dateFin = formatter.date(from:"30/03/2023")
         paiement2.mode = "cheque"
         paiement2.montant = 2500.00
         paiement2.compte = compte1
         paiement2.convention = convention3
         
         let paiement3 = Paiement(context: context)
-        paiement3.date = formatter.date(from:"25/12/2022")
+        paiement3.dateDebut = formatter.date(from:"01/04/2023")
+        paiement3.dateFin = formatter.date(from:"30/04/2023")
         paiement3.mode = "cheque"
         paiement3.montant = 1775.00
         paiement3.compte = compte1

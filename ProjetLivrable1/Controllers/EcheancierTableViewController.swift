@@ -1,10 +1,3 @@
-//
-//  EcheancierTableViewController.swift
-//  ProjetLivrable1
-//
-//  Created by Mark Awad on 2023-03-15.
-//
-
 import UIKit
 
 class EcheancierTableViewController: UITableViewController {
@@ -18,12 +11,10 @@ class EcheancierTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return paiements.count
     }
 
@@ -34,56 +25,21 @@ class EcheancierTableViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/YYYY"
         
-        cell?.lbl_montant?.text = String(paiement.montant) + "$"
-        cell?.lbl_date?.text = formatter.string(for: paiement.date) ?? "dd/MM/YYYY"
-        cell?.lbl_paymentMode?.text = paiement.mode
-        cell?.lbl_nomConvention?.text = paiement.convention?.domaine
+        
+        if paiement.mode == "cash"{
+            cell?.lbl_montant?.text = String(paiement.montant) + "$"
+            cell?.lbl_date?.text = formatter.string(for: paiement.datePaiement)
+            cell?.lbl_date2?.text = ""
+            cell?.lbl_paymentMode?.text = paiement.mode
+            cell?.lbl_nomConvention?.text = paiement.convention?.domaine
+        } else {
+            cell?.lbl_montant?.text = String(paiement.montant) + "$"
+            cell?.lbl_date?.text = formatter.string(for: paiement.dateDebut) ?? "dd/MM/YYYY"
+            cell?.lbl_date2?.text = formatter.string(for: paiement.dateFin) ?? "dd/MM/YYYY"
+            cell?.lbl_paymentMode?.text = paiement.mode
+            cell?.lbl_nomConvention?.text = paiement.convention?.domaine
+        }
+        
         return cell!
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

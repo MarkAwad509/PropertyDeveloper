@@ -10,13 +10,12 @@ import Foundation
 protocol IPaiementDAO{
     func Paiements() -> [Paiement]
     func PaiementsByBank(compte: CompteBancaire) -> [Paiement]
-    func addPaiement(date: Date, mode: Mode, montant: Double) -> Paiement
+    func addPaiement(dateDebut: Date, dateFin: Date, datePaiement: Date, mode: Mode, montant: Double) -> Paiement
     func addPaiementToCompte(paiement: Paiement, compteBancaire: CompteBancaire, nomConvention: String)
     func removePaiement(date: Date, mode: Mode, montant: Double, compte: CompteBancaire)
 }
 
 class PaiementDAO: IPaiementDAO{
-    
     static let shared = PaiementDAO()
     
     func Paiements() -> [Paiement] {

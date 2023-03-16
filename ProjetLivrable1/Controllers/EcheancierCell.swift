@@ -11,6 +11,7 @@ class EcheancierCell: UITableViewCell {
 
     @IBOutlet weak var lbl_montant: UILabel!
     @IBOutlet weak var lbl_date: UILabel!
+    @IBOutlet weak var lbl_date2: UILabel!
     @IBOutlet weak var lbl_paymentMode: UILabel!
     @IBOutlet weak var lbl_nomConvention: UILabel!
     
