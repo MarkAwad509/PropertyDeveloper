@@ -44,17 +44,12 @@ class AddDepenseViewController: UIViewController, UIPickerViewDelegate, UIPicker
         DepenseDAO.shared.addDepenseToProjet(depense: depense, projet: projet!, nomCompteBancaire: self.compteSelected)
         self.input_raison.text = ""
         self.input_montant.text = ""
-        let alert = UIAlertController(title: "La dépense a été ajoutée avec succès", message: "", preferredStyle: .alert)
         
-        //Actions
+        let alert = UIAlertController(title: "La dépense a été ajoutée avec succès", message: "", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Ok", style: .default, handler: {
             _ in
         })
-        
-        //Add action to alert
         alert.addAction(cancelAction)
-        
-        //Present alert
         present(alert, animated: true)
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

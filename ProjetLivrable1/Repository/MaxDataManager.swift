@@ -187,10 +187,12 @@ class MaxDataManager{
     }
     
     //MARK: Ajouter paiement
-    func initPaiement(date: Date, mode: Mode, montant: Double) -> Paiement{
+    func initPaiement(dateDebut: Date, dateFin: Date, datePaiement: Date, mode: Mode, montant: Double) -> Paiement{
         let context = persistentContainer.viewContext
         let paiement = Paiement(context: context)
-        paiement.date = date
+        paiement.dateDebut = dateDebut
+        paiement.dateFin = dateFin
+        paiement.datePaiement = datePaiement
         paiement.modeDePaiement = mode
         paiement.montant = montant
         
@@ -274,7 +276,7 @@ class MaxDataManager{
         let context = persistentContainer.viewContext
         let paiements = Paiements(compte: compte)
         for paiement in paiements {
-            if paiement.date == date && paiement.modeDePaiement == mode && paiement.montant == montant{
+            if paiement.datePaiement == date && paiement.modeDePaiement == mode && paiement.montant == montant{
                 context.delete(paiement)
                 break
             }

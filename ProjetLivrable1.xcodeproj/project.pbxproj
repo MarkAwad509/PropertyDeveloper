@@ -27,6 +27,7 @@
 		97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */; };
 		97A2BC6A29C2618900D90A03 /* AddDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */; };
 		97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E429BE622C00FDC4C1 /* Paiement.swift */; };
+		97FA427229C2B1FB001E156A /* AddPaiementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FA427129C2B1FB001E156A /* AddPaiementViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaiementTableViewController.swift; sourceTree = "<group>"; };
 		97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepenseViewController.swift; sourceTree = "<group>"; };
 		97C4F2E429BE622C00FDC4C1 /* Paiement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paiement.swift; sourceTree = "<group>"; };
+		97FA427129C2B1FB001E156A /* AddPaiementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaiementViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
 				97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */,
 				97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */,
+				97FA427129C2B1FB001E156A /* AddPaiementViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */,
 				971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */,
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,
+				97FA427229C2B1FB001E156A /* AddPaiementViewController.swift in Sources */,
 				979E42A929C1334A0025AC90 /* DepenseTableViewController.swift in Sources */,
 				979E42A729C129440025AC90 /* ProjetTableViewController.swift in Sources */,
 				971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */,
