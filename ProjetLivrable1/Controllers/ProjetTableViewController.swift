@@ -76,6 +76,7 @@ class ProjetTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    var destination: ProjetDetailViewController!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Recuperer l'index de la cellule sur lequel le user tapotte
         let cell = sender as! UITableViewCell

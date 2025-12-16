@@ -130,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				979E42A629C129440025AC90 /* ProjetTableViewController.swift */,
+				79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */,
 				979E42A829C1334A0025AC90 /* DepenseTableViewController.swift */,
 				979E42AA29C146530025AC90 /* CompteTableViewController.swift */,
 				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
@@ -228,6 +229,7 @@
 				979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */,
 				971AC8D229B8D0E40017DA91 /* CompteBancaire.swift in Sources */,
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,
+				79ADAD3729C1F91C00A134A4 /* ProjetDetailViewController.swift in Sources */,
 				979E42A929C1334A0025AC90 /* DepenseTableViewController.swift in Sources */,
 				790F3BEA29C2BF1900663C45 /* EcheancierTableViewController.swift in Sources */,
 				979E42A729C129440025AC90 /* ProjetTableViewController.swift in Sources */,

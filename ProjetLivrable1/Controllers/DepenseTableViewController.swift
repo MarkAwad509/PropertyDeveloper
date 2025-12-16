@@ -11,13 +11,10 @@ class DepenseTableViewController: UITableViewController {
     @IBOutlet weak var lbl_desc: UILabel!
     @IBOutlet weak var lbl_title: UILabel!
     var depenses: [Depense] = []
-    var projet: Projet?
+    var projet: Projet!
     override func viewDidLoad() {
         if let proj = projet{
-            self.depenses = DepenseDAO.shared.Depenses(projet: self.projet!)
-            lbl_title.text = self.projet!.nom
-            lbl_desc.text = self.projet!.desc ?? "Pas de description."
-            
+            self.depenses = DepenseDAO.shared.Depenses(projet: projet)
         }
     }
 
@@ -38,8 +35,7 @@ class DepenseTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "depenseCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "\(self.depenses[indexPath.row].raison!)"
-        cell.detailTextLabel?.text = "Montant: \(String(format: "%.2f", self.depenses[indexPath.row].montant))$"
+        cell.textLabel?.text = self.depenses[indexPath.row].raison
         
         return cell
     }
