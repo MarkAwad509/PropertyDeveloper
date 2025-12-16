@@ -8,6 +8,7 @@
     </entity>
     <entity name="Convention" representedClassName="Convention" syncable="YES" codeGenerationType="class">
         <attribute name="domaine" optional="YES" attributeType="String" minValueString="5"/>
+        <attribute name="fournisseur" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="paiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Paiement" inverseName="convention" inverseEntity="Paiement"/>
     </entity>
     <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
@@ -17,7 +18,9 @@
         <relationship name="projet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Projet" inverseName="depenses" inverseEntity="Projet"/>
     </entity>
     <entity name="Paiement" representedClassName="Paiement" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" minDateTimeInterval="699976380" usesScalarValueType="NO"/>
+        <attribute name="dateDebut" optional="YES" attributeType="Date" minDateTimeInterval="700624860" usesScalarValueType="NO"/>
+        <attribute name="dateFin" optional="YES" attributeType="Date" minDateTimeInterval="700624860" usesScalarValueType="NO"/>
+        <attribute name="datePaiement" optional="YES" attributeType="Date" minDateTimeInterval="699976380" usesScalarValueType="NO"/>
         <attribute name="mode" optional="YES" attributeType="String" minValueString="6" maxValueString="6"/>
         <attribute name="montant" optional="YES" attributeType="Double" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="compte" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompteBancaire" inverseName="paiements" inverseEntity="CompteBancaire"/>

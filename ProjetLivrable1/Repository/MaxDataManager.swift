@@ -41,6 +41,11 @@ class MaxDataManager{
         for convention in conventions {
             context.delete(convention)
         }
+        
+        let paiements = Paiements()
+        for paiement in paiements {
+            context.delete(paiement)
+        }
 
         do {
             try context.save()
@@ -79,6 +84,34 @@ class MaxDataManager{
         convention4.domaine = "Matériaux de construction"
         let convention5 = Convention(context: context)
         convention5.domaine = "Architecte"
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YYYY"
+        
+        let paiement1 = Paiement(context: context)
+        paiement1.datePaiement = formatter.date(from:"25/03/2023")
+        paiement1.mode = "cash"
+        paiement1.montant = 20000.00
+        paiement1.compte = compte2
+        paiement1.convention = convention5
+        
+        let paiement2 = Paiement(context: context)
+        paiement2.dateDebut = formatter.date(from:"01/03/2023")
+        paiement2.dateFin = formatter.date(from:"30/03/2023")
+        paiement2.mode = "cheque"
+        paiement2.montant = 2500.00
+        paiement2.compte = compte1
+        paiement2.convention = convention3
+        
+        let paiement3 = Paiement(context: context)
+        paiement3.dateDebut = formatter.date(from:"01/04/2023")
+        paiement3.dateFin = formatter.date(from:"30/04/2023")
+        paiement3.mode = "cheque"
+        paiement3.montant = 1775.00
+        paiement3.compte = compte1
+        paiement3.convention = convention3
+        
+        
         
         do{
             try context.save()
@@ -142,8 +175,20 @@ class MaxDataManager{
         }
     }
     
+    //MARK: get all Payments
+    func Paiements() -> [Paiement]{
+        let fetchRequest: NSFetchRequest<Paiement> = Paiement.fetchRequest()
+        let context = persistentContainer.viewContext
+        do {
+            return try context.fetch(fetchRequest)
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
     //MARK: Trouver les paiements par compte bancaire
-    func Paiements(compte: CompteBancaire) -> [Paiement]{
+    func PaiementsByBank(compte: CompteBancaire) -> [Paiement]{
         let fetchRequest: NSFetchRequest<Paiement> = Paiement.fetchRequest()
         let predicate = NSPredicate(format: "compte = %@", compte)
         fetchRequest.predicate = predicate
@@ -155,6 +200,22 @@ class MaxDataManager{
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+    }
+    
+    //MARK: Ajouter convention
+    func intiConvention(domaine: String, fournisseur: String) -> Convention{
+        let context = persistentContainer.viewContext
+        let convention = Convention(context: context)
+        convention.domaine = domaine
+        convention.fournisseur = fournisseur
+        
+        do{
+            try context.save()
+        } catch {
+            let error = error as NSError
+            print("Addition did not work: \(error)", error.userInfo)
+        }
+        return convention
     }
     
     //MARK: Ajouter dépense
@@ -174,10 +235,12 @@ class MaxDataManager{
     }
     
     //MARK: Ajouter paiement
-    func initPaiement(date: Date, mode: Mode, montant: Double) -> Paiement{
+    func initPaiement(dateDebut: Date, dateFin: Date, datePaiement: Date, mode: Mode, montant: Double) -> Paiement{
         let context = persistentContainer.viewContext
         let paiement = Paiement(context: context)
-        paiement.date = date
+        paiement.dateDebut = dateDebut
+        paiement.dateFin = dateFin
+        paiement.datePaiement = datePaiement
         paiement.modeDePaiement = mode
         paiement.montant = montant
         
@@ -259,9 +322,9 @@ class MaxDataManager{
     //MARK: Remove paiement
     func deletePaiement(date: Date, mode: Mode, montant: Double, compte: CompteBancaire){
         let context = persistentContainer.viewContext
-        let paiements = Paiements(compte: compte)
+        let paiements = PaiementsByBank(compte: compte)
         for paiement in paiements {
-            if paiement.date == date && paiement.modeDePaiement == mode && paiement.montant == montant{
+            if paiement.datePaiement == date && paiement.modeDePaiement == mode && paiement.montant == montant{
                 context.delete(paiement)
                 break
             }

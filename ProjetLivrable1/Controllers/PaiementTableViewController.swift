@@ -8,10 +8,14 @@
 import UIKit
 
 class PaiementTableViewController: UITableViewController {
+    @IBOutlet weak var lbl_solde: UILabel!
     var paiements: [Paiement] = []
-    var compte: CompteBancaire!
+    var compte: CompteBancaire?
     override func viewDidLoad() {
-        self.paiements = PaiementDAO.shared.Paiements(compte: self.compte)
+        if let compteBank = compte{
+            self.paiements = PaiementDAO.shared.PaiementsByBank(compte: self.compte!)
+            self.lbl_solde.text! += "\(String(format: "%.2f", self.compte!.somme))$"
+        }
         //super.viewDidLoad()
     }
 
@@ -29,7 +33,7 @@ class PaiementTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "paiementCell", for: indexPath)
 
         // Configure the cell...
         cell.textLabel?.text = self.paiements[indexPath.row].convention?.domaine
@@ -74,14 +78,13 @@ class PaiementTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let destination = segue.destination as? AddPaiementViewController
+        destination?.compte = self.compte
     }
-    */
-
 }

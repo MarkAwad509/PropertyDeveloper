@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79ADAD3729C1F91C00A134A4 /* ProjetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */; };
+		790F3BEA29C2BF1900663C45 /* EcheancierTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F3BE929C2BF1900663C45 /* EcheancierTableViewController.swift */; };
+		790F3BEE29C2D36200663C45 /* EcheancierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790F3BED29C2D36200663C45 /* EcheancierCell.swift */; };
+		79182E5629C3C91A00A4025D /* AddPaiementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79182E5529C3C91A00A4025D /* AddPaiementViewController.swift */; };
 		9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */; };
 		9704CA6929C0A1FB00BE24E4 /* ConventionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */; };
 		9704CA6B29C0B66B00BE24E4 /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */; };
@@ -26,11 +28,14 @@
 		979E42AB29C146530025AC90 /* CompteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979E42AA29C146530025AC90 /* CompteTableViewController.swift */; };
 		97A2BC6629C1537B00D90A03 /* ConventionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */; };
 		97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */; };
+		97A2BC6A29C2618900D90A03 /* AddDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */; };
 		97C4F2E529BE622C00FDC4C1 /* Paiement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C4F2E429BE622C00FDC4C1 /* Paiement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79ADAD3629C1F91C00A134A4 /* ProjetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetDetailViewController.swift; sourceTree = "<group>"; };
+		790F3BE929C2BF1900663C45 /* EcheancierTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcheancierTableViewController.swift; sourceTree = "<group>"; };
+		790F3BED29C2D36200663C45 /* EcheancierCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcheancierCell.swift; sourceTree = "<group>"; };
+		79182E5529C3C91A00A4025D /* AddPaiementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaiementViewController.swift; sourceTree = "<group>"; };
 		9704CA6629C0A15600BE24E4 /* CompteBancaireDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteBancaireDAO.swift; sourceTree = "<group>"; };
 		9704CA6829C0A1FB00BE24E4 /* ConventionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionDAO.swift; sourceTree = "<group>"; };
 		9704CA6A29C0B66B00BE24E4 /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		979E42AA29C146530025AC90 /* CompteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteTableViewController.swift; sourceTree = "<group>"; };
 		97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionTableViewController.swift; sourceTree = "<group>"; };
 		97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaiementTableViewController.swift; sourceTree = "<group>"; };
+		97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepenseViewController.swift; sourceTree = "<group>"; };
 		97C4F2E429BE622C00FDC4C1 /* Paiement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paiement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +135,10 @@
 				979E42AA29C146530025AC90 /* CompteTableViewController.swift */,
 				97A2BC6529C1537B00D90A03 /* ConventionTableViewController.swift */,
 				97A2BC6729C1E5A900D90A03 /* PaiementTableViewController.swift */,
+				97A2BC6929C2618900D90A03 /* AddDepenseViewController.swift */,
+				790F3BE929C2BF1900663C45 /* EcheancierTableViewController.swift */,
+				790F3BED29C2D36200663C45 /* EcheancierCell.swift */,
+				79182E5529C3C91A00A4025D /* AddPaiementViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9704CA6D29C0B78200BE24E4 /* PaiementDAO.swift in Sources */,
+				79182E5629C3C91A00A4025D /* AddPaiementViewController.swift in Sources */,
+				97A2BC6A29C2618900D90A03 /* AddDepenseViewController.swift in Sources */,
+				790F3BEE29C2D36200663C45 /* EcheancierCell.swift in Sources */,
 				9704CA6729C0A15600BE24E4 /* CompteBancaireDAO.swift in Sources */,
 				97A2BC6829C1E5A900D90A03 /* PaiementTableViewController.swift in Sources */,
 				971AC8CB29B8CE5E0017DA91 /* MaxDataManager.swift in Sources */,
@@ -218,6 +231,7 @@
 				971AC8CD29B8CF610017DA91 /* ProjetDAO.swift in Sources */,
 				79ADAD3729C1F91C00A134A4 /* ProjetDetailViewController.swift in Sources */,
 				979E42A929C1334A0025AC90 /* DepenseTableViewController.swift in Sources */,
+				790F3BEA29C2BF1900663C45 /* EcheancierTableViewController.swift in Sources */,
 				979E42A729C129440025AC90 /* ProjetTableViewController.swift in Sources */,
 				971AC8B229B8C6B00017DA91 /* SceneDelegate.swift in Sources */,
 				9704CA6B29C0B66B00BE24E4 /* DepenseDAO.swift in Sources */,

@@ -8,22 +8,26 @@
 import Foundation
 
 protocol IPaiementDAO{
-    func Paiements(compte: CompteBancaire) -> [Paiement]
-    func addPaiement(date: Date, mode: Mode, montant: Double) -> Paiement
+    func Paiements() -> [Paiement]
+    func PaiementsByBank(compte: CompteBancaire) -> [Paiement]
+    func addPaiement(dateDebut: Date, dateFin: Date, datePaiement: Date, mode: Mode, montant: Double) -> Paiement
     func addPaiementToCompte(paiement: Paiement, compteBancaire: CompteBancaire, nomConvention: String)
     func removePaiement(date: Date, mode: Mode, montant: Double, compte: CompteBancaire)
 }
 
 class PaiementDAO: IPaiementDAO{
-    
     static let shared = PaiementDAO()
     
-    func Paiements(compte: CompteBancaire) -> [Paiement] {
-        return MaxDataManager.shared.Paiements(compte: compte)
+    func Paiements() -> [Paiement] {
+        return MaxDataManager.shared.Paiements()
     }
     
-    func addPaiement(date: Date, mode: Mode, montant: Double) -> Paiement {
-        return MaxDataManager.shared.initPaiement(date: date, mode: mode, montant: montant)
+    func PaiementsByBank(compte: CompteBancaire) -> [Paiement] {
+        return MaxDataManager.shared.PaiementsByBank(compte: compte)
+    }
+    
+    func addPaiement(dateDebut: Date, dateFin: Date, datePaiement: Date, mode: Mode, montant: Double) -> Paiement {
+        return MaxDataManager.shared.initPaiement(dateDebut: dateDebut, dateFin: dateFin, datePaiement: datePaiement, mode: mode, montant: montant)
     }
     
     func addPaiementToCompte(paiement: Paiement, compteBancaire: CompteBancaire, nomConvention: String){

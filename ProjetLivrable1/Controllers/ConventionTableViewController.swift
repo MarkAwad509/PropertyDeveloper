@@ -32,11 +32,46 @@ class ConventionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conventionCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = self.conventions[indexPath.row].domaine
+        cell.textLabel!.text = "Domaine: \(String(describing: self.conventions[indexPath.row].domaine!))"
+        cell.detailTextLabel!.text = "Fournisseur: \(String(describing: self.conventions[indexPath.row].fournisseur ?? "Pas de fournisseur"))"
+        
 
         return cell
     }
 
+    @IBAction func ajouterConvention(_ sender: Any) {
+        let alert = UIAlertController(title: "Ajout d'une convention", message: "", preferredStyle: .alert)
+        alert.addTextField{(textfield) in
+            textfield.placeholder = "Domaine"
+            textfield.textColor = UIColor.blue
+        }
+        alert.addTextField{(textfield) in
+            textfield.placeholder = "Fournisseur"
+            textfield.textColor = UIColor.systemPink
+        }
+        
+        //Actions
+        let saveAction = UIAlertAction(title: "Ajouter", style: .default, handler: { _ in
+            if let domaine = alert.textFields?[0].text, let fournisseur = alert.textFields?[1].text {
+                //Ajout a la bcContext
+                let convention = ConventionDAO.shared.addConvention(domaine: domaine, fournisseur: fournisseur)
+                //Mise a jour de l'affichage tableview
+                self.conventions.append(convention)
+                self.tableView.reloadData()
+                
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Annuler", style: .default, handler: {
+            _ in
+        })
+        
+        //Add action to alert
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        //Present alert
+        present(alert, animated: true)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
