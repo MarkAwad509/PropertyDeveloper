@@ -11,8 +11,8 @@ class ProjetTableViewController: UITableViewController {
     var projets: [Projet] = []
     override func viewDidLoad() {
         //super.viewDidLoad()
+        MaxDataManager.shared.removeAllDatas()
         MaxDataManager.shared.initDatas()
-        //MaxDataManager.shared.removeAllDatas()
         self.projets = ProjetDAO.shared.projets()
     }
 
@@ -78,13 +78,14 @@ class ProjetTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     var destination: ProjetDetailViewController!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Recuperer l'index de la cellule sur lequel le user tapotte
+        let cell = sender as! UITableViewCell
+        let index = tableView.indexPath(for: cell)!.row
         
-        if segue.identifier == "projectDetailSegue" {
-            let cell = sender as? UITableViewCell
-            let index = tableView.indexPath(for: cell!)?.row
-            destination = segue.destination as? ProjetDetailViewController
-            let project = projets[index!]
-            destination?.projet = project
-        }
+        //envoyer l'adresse à PeopleViewTableController
+        let destination = segue.destination as? DepenseTableViewController
+        destination?.projet = self.projets[index]
     }
+    
+
 }
